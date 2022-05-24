@@ -11,6 +11,7 @@ public:
   int * const m;
 
   int& operator[](unsigned int i);
+  int& operator()(unsigned int r, unsigned c);
 
   void rand();
 

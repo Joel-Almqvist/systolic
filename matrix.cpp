@@ -21,11 +21,16 @@ int& Matrix::operator[](unsigned int i){
   return m[i];
 }
 
+int& Matrix::operator()(unsigned int r, unsigned int c){
+
+  return m[c + r*cols];
+}
+
 
 void Matrix::rand(){
 
   for(unsigned int i = 0; i < size; i++){
-    m[i] = std::experimental::randint(-25, 25);
+    m[i] = std::experimental::randint(-5, 5);
   }
 };
 

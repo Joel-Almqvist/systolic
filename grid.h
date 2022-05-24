@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <algorithm>
+#include <cassert>
+
 
 #include "matrix.h"
 #include "processor.h"
@@ -14,15 +16,15 @@ private:
 
 public:
 
-  Grid(int a, int b);
+  Grid(int d);
   ~Grid();
 
   Matrix calc(Matrix& m1, Matrix& m2);
 
+  //void print();
 
   const int size;
-  const int x;
-  const int y;
+  const int dim;
 
 
 };

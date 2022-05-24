@@ -8,13 +8,20 @@
 class Processor{
   private:
 
+    friend class Grid;
+
   public:
 
-    Processor(int id, int id_tot);
+    Processor(int id);
     int id;
-    int id_tot;
 
-    void calc(unsigned int iteration, Matrix& m1, Matrix& m2);
+    void calc(
+      Matrix& m1,
+      Matrix& m2,
+      unsigned int iteration,
+      unsigned int dim,
+      Matrix& out
+    );
 
 
 
