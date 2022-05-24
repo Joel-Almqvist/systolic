@@ -8,3 +8,5 @@ void Processor::calc(unsigned int index, int* input, int* output){
 
 
 }
+
+Processor::Processor() : foo{-1}{};

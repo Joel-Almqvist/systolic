@@ -2,18 +2,20 @@
 
 #include "grid.h"
 #include "processor.h"
+#include "matrix.h"
 
 int main(){
 
   Grid grid{4, 4};
-  grid.foo();
 
   Processor p{};
-  int bar = 10;
 
-  // test
+  Matrix m1{4,4};
 
-  p.calc(0, &bar, &bar);
+  m1.rand();
+  m1.print();
+
+
 
   return 0;
 }
