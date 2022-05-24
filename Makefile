@@ -1,2 +1,2 @@
 all:
-	g++ main.cpp grid.cpp processor.cpp -o systolic
+	g++ main.cpp grid.cpp processor.cpp -o syst
