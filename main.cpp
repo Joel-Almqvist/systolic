@@ -8,8 +8,6 @@ int main(){
 
   Grid grid{4, 4};
 
-  Processor p{};
-
   Matrix m1{4,4};
 
   m1.rand();

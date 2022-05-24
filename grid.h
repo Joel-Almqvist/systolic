@@ -1,6 +1,9 @@
 #ifndef grid_h
 #define grid_h
 
+#include <iostream>
+#include <algorithm>
+
 #include "matrix.h"
 #include "processor.h"
 

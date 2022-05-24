@@ -1,12 +1,14 @@
 #include "processor.h"
-#include <iostream>
 
 
-void Processor::calc(unsigned int index, int* input, int* output){
+void Processor::calc(unsigned int iteration, Matrix& m1, Matrix& m2){
 
   printf("Calc called\n");
 
 
 }
 
-Processor::Processor() : foo{-1}{};
+Processor::Processor(int id, int id_tot) :
+  id{id},
+  id_tot{id_tot}
+  {};

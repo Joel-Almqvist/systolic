@@ -1,4 +1,3 @@
-#include <iostream>
 #include "grid.h"
 
 
@@ -12,7 +11,7 @@ Grid::Grid(int a, int b) :
     // Init objects in allocated space
     Processor* p;
     for(unsigned int i = 0; i < size; i++){
-      p = new(pgrid + i) Processor();
+      p = new(pgrid + i) Processor(i, size);
   }
 
 
@@ -24,6 +23,16 @@ Grid::~Grid(){
 
 
 Matrix Grid::calc(Matrix& m1, Matrix& m2){
+
+  // TODO Revise this
+  unsigned int max_it = x + (x - 3);
+
+  for(unsigned int it; it < max_it; it++){
+    for(unsigned int i; i < size; i++){
+      pgrid[i].calc(it, m1, m2);
+    }
+
+  }
 
 
 
