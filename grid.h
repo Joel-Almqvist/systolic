@@ -4,14 +4,13 @@
 #include <iostream>
 #include <algorithm>
 #include <cassert>
-
+#include <cstring>
 
 #include "matrix.h"
 #include "processor.h"
 
 class Grid{
 private:
-
   Processor* pgrid;
 
 public:
@@ -21,12 +20,10 @@ public:
 
   Matrix calc(Matrix& m1, Matrix& m2);
 
-  //void print();
-
   const int size;
+
+  // A grid is always assumed to be a square for simplicity
   const int dim;
-
-
 };
 
 #endif

@@ -7,11 +7,9 @@
 
 class Processor{
   private:
-
     friend class Grid;
 
   public:
-
     Processor(int id);
     int id;
 
