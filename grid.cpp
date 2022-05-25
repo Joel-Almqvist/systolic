@@ -29,6 +29,8 @@ Matrix Grid::calc(Matrix& m1, Matrix& m2){
   // We need m1.rows + (dim - 1) iterations for the last element
   // to perform its first iteration. Then it performs the remaining iterations
   unsigned int max_it = m1.getRows() + (dim - 1) + (m1.getCols() - 1);
+
+
   Matrix out{dim, dim};
 
   for(unsigned int it = 0; it < max_it; it++){

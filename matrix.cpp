@@ -72,11 +72,12 @@ void Matrix::rand(){
 
 
 void Matrix::print(){
+
   for(unsigned int i = 0; i < size; i++){
 
     std::cout << m[i] << ", ";
 
-    if((i + 1) % rows == 0){
+    if((i + 1) % cols == 0){
       std::cout << "\n";
     }
   }

@@ -4,26 +4,26 @@
 #include "processor.h"
 #include "matrix.h"
 
-static const int DIM = 4;
+
+// Given  A = M x N, B = N x M and C = A x B
+// then M = OUTER_DIM and N = INNER_DIM.
+// C will always be of dimensions M x M
+static const int OUTER_DIM = 2;
+static const int INNER_DIM = 4;
 
 int main(){
-  Grid grid{DIM};
+  Grid grid{OUTER_DIM};
 
-  Matrix m1{DIM, DIM};
+  Matrix m1{OUTER_DIM, INNER_DIM};
   m1.rand();
 
-  Matrix m2{DIM, DIM};
+  Matrix m2{INNER_DIM, OUTER_DIM};
   m2.rand();
 
-  /*
-  for(int i = 0; i < DIM * DIM; i++){
-    m1.getMat()[i] = i;
-    m2.getMat()[i] = i;
-  }
-  */
 
   m1.print();
   std::cout << "\n\n";
+
 
   m2.print();
   std::cout << "\n\n";
